@@ -1,0 +1,86 @@
+body {
+
+    background-image: url("https://images.all-free-download.com/images/graphicthumb/starry_night_192398.jpg");
+}
+
+:root{
+    --orbirColor: rgb(81, 81, 81);
+}
+
+.orbit {
+  border: 1px solid var(--orbirColor);
+}
+
+
+#sun {
+  height: 200px;
+  width: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  box-shadow: -2px 2px 21px 8px rgb(179, 116, 0);
+}
+
+#earth {
+  height: 50px;
+  width: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+}
+
+.earth-orbit,
+.earth-spin {
+    margin-top: -185px;
+    margin-left: -185px;
+    width: 370px;
+    height: 370px;
+}
+
+#moon {
+  margin-top: -6px;
+  margin-left: -6px;
+  height: 12px;
+  width: 12px;
+  box-shadow: 1px 1px  10px 5px rgb(65, 63, 63);
+}
+.moon-orbit,
+.moon-spin {
+  height: 90px;
+  width: 90px;
+  margin-top: -45px;
+  margin-left: -45px;
+  border-color: var(--orbirColor);
+}
+
+#mercury {
+    margin-top: -20px;
+    margin-left: -20px;
+    height: 45px;
+    width: 45px;
+  }
+  
+  .mercury-orbit,
+  .mercury-spin {
+    width: 600px;
+    height: 600px;
+    margin-left: -300px;
+    margin-top: -300px;
+  }
+  
+
+/* Spinning */
+
+@keyframes spin-right {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.earth-spin {
+  animation: spin-right 26.5s linear infinite;
+}
+.moon-spin {
+  animation: spin-right 3s linear infinite;
+}
+.mercury-spin {
+    animation: spin-right 32.8s linear infinite;
+  }
